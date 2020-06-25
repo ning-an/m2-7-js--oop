@@ -11,3 +11,36 @@
 //    It's up to you to decide how quickly these values should change.
 
 // B) Make Boots wait 20 minutes and call then console.log(boots);
+class Cat {
+    constructor(name, breed) {
+        this.name = name;
+        this.breed = breed;
+        this.species = 'cat';
+        this.tiredness = 0;
+        this.hunger = 0;
+        this.loneliness = 0;
+        this.happiness = 0;
+    }
+    sleep = (hours) => {
+        this.tiredness -= 5 * hours;
+        this.happiness += 3 * hours;
+    }
+    eat = (numOfKibbles) => {
+        this.hunger -= 0.2 * numOfKibbles;
+        this.happiness += numOfKibbles;
+    }
+    play = (minutes) => {
+        this.loneliness -= 3 * minutes;
+        this.happiness += 5 * minutes;
+    }
+    wait = (minutes) => {
+        this.tiredness += 0.5 * minutes;
+        this.hunger += minutes;
+        this.loneliness += 5 * minutes;
+        this.happiness -= 3 * minutes;
+    }
+}
+
+const boots = new Cat('Boots', 'Simaese');
+boots.wait(40);
+console.log(boots);
