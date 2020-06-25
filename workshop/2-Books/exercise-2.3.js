@@ -1,7 +1,40 @@
 // From 2.1. and 2.2
 // Copy over your solutions classes you created in 2.1 and 2.2.
 // Paste them right here:
+class Book {
+  constructor(title, genre, author, isRead) {
+      this.title = title;
+      this.genre = genre;
+      this.author = author;
+      this.isRead = isRead || false;
+  }
+}
+// const book1 = new Book('To Kill a Mockingbird', 'novel', 'Harper Lee', true);
+// const book2 = new Book('ALL THE LIGHT WE CANNOT SEE: A NOVEL', 'novel', 'Anthony Doerr', false);
+// const book3 = new Book('THE LIES THAT BIND', 'fiction', 'Emily Giffin');
+// const book4 = new Book('TRUTH: A BRIEF HISTORY OF TOTAL BULLSH*T', 'non-fiction', 'Tom Phillips');
+// const book5 = new Book('Beautiful Disaster', 'romance', 'Jamie McGuire', true);
 
+class BookList {
+  // Code here
+  constructor() {
+    this.books = [];
+    this.lastRead = null;
+    this.currentlyReading = null;
+  }
+  add = (book) => {
+    this.books.push(book);
+    this.currentlyReading = book;
+  }
+  getNumRead = () => {
+    return this.books.filter( elem => elem.isRead).length;
+  }
+  getNumUnread = () => {
+    return this.books.filter( elem => !elem.isRead).length;
+  }
+}
+
+// const homeLibrary = new BookList([], null, null);
 // Exercise 2.3
 //
 // We want to be able to add books to our BookList, so that we can start a
