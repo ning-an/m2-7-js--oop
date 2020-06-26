@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>My Library</h1>
+    <h2>Books <span class='totalBooks'></span></h2>
+    <div class='books'></div>
+    <h2>Currently Reading</h2>
+    <div class='currentlyReading'></div>
+    <h2>Finished Books <span class='totalFinished'></span></h2>
+    <div class='finished'></div>
+
+    <form class='form'>
+        <fieldset>
+            <legend>Coming Next...</legend>
+            <label>
+                Title
+                <input type="text" id='title' required>
+            </label>
+            <label>
+                Author
+                <input type="text" id='author' required>
+            </label>
+            <label>
+                URL
+                <input type="text" id='url' required>
+            </label>
+            <label>
+                Genre
+                <input type="text" id='genre' required>
+            </label>
+            <label>
+                <input type="checkbox" id='checkbox'>
+                Already Read
+            </label>
+            <input type="submit" class='submit'>
+        </fieldset>
+    </form>
+    <script src="./app.js"></script>
+</body>
+</html>

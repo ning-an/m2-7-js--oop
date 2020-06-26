@@ -1,0 +1,44 @@
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-top: 50px;
+    width: 100vw;
+    background-color: lightgray;
+}
+input {
+    margin-top: 20px;
+}
+
+.books, .finished {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.img {
+    width: 200px;
+    height: 300px;
+    box-shadow: 0 0 3px 1px lightgrey;
+}
+
+.img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.bookdiv {
+    text-align: center;
+}
+
+.form {
+    margin-top: 50px;
+}
+
+legend {
+    font-size: 30px;
+    background-color: lightgray;
+}
